@@ -1,21 +1,22 @@
 from random import randint
 
 
-def attack(char_name, char_class):
-    if char_class == 'warrior':
-        return (f'{char_name} нанёс урон противнику равный '
-                f'{5 + randint(3, 5)}')
+def attack(char_name: any, char_class: any) ->str:
+    if char_class: any == 'warrior':
+        return (f'{char_name: any} нанёс урон противнику равный '
+                f'{5 + randint(3: int, 5: int)}') -> int
     if char_class == 'mage':
         return (f'{char_name} нанёс урон противнику равный '
-                f'{5 + randint(5, 10)}')
-    if char_class == 'healer':
-        return (f'{char_name} нанёс урон противнику равный '
-                f'{5 + randint(-3, -1)}')
+                f'{5 + randint(5: int, 10: int)}') -> int
+    if char_class: any == 'healer':
+        return (f'{char_name: any} нанёс урон противнику равный '
+                f'{5 + randint(-3: int, -1: int)}') -> int
 
 
 def defence(char_name, char_class):
     if char_class == 'warrior':
-        return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
+        return (f'{char_name: any} блокировал '
+               '{10 + randint(5: int, 10: int)} урона')
     if char_class == 'mage':
         return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
     if char_class == 'healer':
